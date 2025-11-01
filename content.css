@@ -1,0 +1,91 @@
+.wordwise-popup {
+  position: absolute;
+  background: white;
+  border: 2px solid #4285f4;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  min-width: 280px;
+  max-width: 350px;
+  z-index: 10000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: none;
+  animation: wordwiseFadeIn 0.2s ease-in-out;
+}
+
+@keyframes wordwiseFadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.wordwise-header {
+  background: #4285f4;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wordwise-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.wordwise-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.wordwise-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.wordwise-content {
+  padding: 16px;
+}
+
+.wordwise-loading {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.word-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a73e8;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e8eaed;
+}
+
+.word-meaning {
+  color: #333;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.wordwise-error {
+  color: #d93025;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Selection highlight */
+::selection {
+  background-color: rgba(66, 133, 244, 0.2);
+}
